@@ -1,0 +1,18 @@
+.th-plant-list {
+	list-style-type: none;
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+}
+.th-shopping-list {
+	width: 100%;
+}
+.th-plant-btn button{
+	border-radius: 5px;
+	border: none;
+	margin-right: 20%;
+}
+.btn-remove {
+	color: red;
+}

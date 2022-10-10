@@ -1,0 +1,13 @@
+.th-categories {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.th-categories-select {
+	margin-right: 15px;
+	height: 30px;
+}
+
+option {
+	text-transform: capitalize;
+}

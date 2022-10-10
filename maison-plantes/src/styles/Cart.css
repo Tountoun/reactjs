@@ -1,0 +1,55 @@
+.th-cart {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: white;
+	background-color: rgb(16, 214, 165);
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 200px;
+}
+.th-cart > button {
+	padding: 15px 32px;
+	text-align: center;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	margin-top: 20px;
+}
+.th-cart-add-button {
+	margin-left: 32px;
+	cursor: pointer;
+}
+
+.th-cart-toggle-button {
+	background: none;
+	outline: none;
+	border: none;
+	font-weight: 600;
+	cursor: pointer;
+	align-self: self-start;
+	padding: 0;
+	color: white;
+}
+
+.th-cart-closed {
+	padding: 32px;
+	width: 200px;
+}
+
+.th-cart-closed > button {
+	color: black;
+	background-color: #31b572;
+	border: none;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.th-cart-closed > button:hover {
+	background-color: rgb(16, 214, 165);
+}

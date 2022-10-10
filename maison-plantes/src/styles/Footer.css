@@ -1,0 +1,21 @@
+.th-footer {
+	color: black;
+	padding: 32px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	font-weight: 500;
+	background-color: rgb(129, 221, 129);
+}
+
+.th-footer-elem {
+	margin-bottom: 10px;
+}
+
+input[type = email] {
+	width: 50%;
+	padding: 10px 20px;
+	margin: 8px;
+	box-sizing: border-box;
+}

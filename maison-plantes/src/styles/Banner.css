@@ -1,0 +1,19 @@
+.th-banner {
+	color: black;
+	text-align: right;
+	padding: 32px;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	align-items: center;
+	background-color: rgb(129, 221, 129);
+}
+
+.th-title {
+	padding-left: 32px;
+}
+
+.th-logo {
+	height: 45px;
+	width: 45px;
+}
