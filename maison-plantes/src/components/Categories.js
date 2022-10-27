@@ -11,7 +11,7 @@ function Categories({ setActiveCategory, categories, activeCategory }) {
 				<option value=''>Tout</option>
 				{categories.map((cat) => (
 					<option key={cat} value={cat}>
-						{cat}
+						{cat.charAt(0).toUpperCase() + cat.slice(1,)}
 					</option>
 				))}
 			</select>

@@ -17,23 +17,23 @@ function Cart({cart, updateCart}) {
 				className='th-cart-toggle-button'
 				onClick={() => setIsOpen(false)}
 			>
-				<h3>Fermer</h3>
+				Fermer le panier
 			</button>
 			{cart.length > 0 ? (
 				<div>
-					<h2>Panier</h2>
+					<h2>Mon panier</h2>
 					<ul>
-						{cart.map(({ name, price, amount }, index) => (
-							<div key={`${name}-${index}`}>
-								{name} {price}€ x {amount}
-							</div>
+						{cart.map(({ name, amount }, index) => (
+							<li key={`${name}-${index}`}>
+								{amount} {name.charAt(0).toUpperCase() + name.slice(1, )}
+							</li>
 						))}
 					</ul>
 					<h3>Total :{total} €</h3>
-					<button onClick={() => updateCart([])}>Vider le panier</button>
+					<button onClick={() => updateCart([])} className="flush-cart">Vider le panier</button>
 				</div>
 			) : (
-				<div>Votre panier est vide</div>
+				<div className='empty-cart'>Votre panier est vide</div>
 			)}
 		</div>
     ) : (

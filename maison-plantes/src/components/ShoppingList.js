@@ -50,6 +50,7 @@ function ShoppingList({cart, updateCart, activeCategory, setActiveCategory}) {
 					!activeCategory || activeCategory === category ? (
                                     <div key={id}>
                                            <PlantItem
+                                                id={id}
                                                 cover={cover}
                                                 name={name}
                                                 water={water}

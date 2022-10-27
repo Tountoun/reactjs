@@ -2,15 +2,23 @@ import { useState } from 'react';
 import '../styles/Footer.css';
 
 function Footer() {
-	const [inputValue, setInputValue] = useState('')
-    
-    function handleInput(e) {
-        setInputValue(e.target.value);
-    }
+	const [email, setEmail] = useState('')
+    const [enabled, setEnabled] = useState(false);
 
+    function handleChange(e) {
+        setEmail(e.target.value);
+        if(email.includes('@')) {
+            setEnabled(true);
+        }else {
+            setEnabled(false);
+        }
+    }
+    function handleSubmit() {
+        alert('Votre email est ' + email);
+        setEmail('');
+    }
     function handleBlur() {
-        if (!inputValue.includes('@')){
-            alert("Il n'y a pas d'@ dans votre email");
+        if (!email.includes('@')){
         }
     }
     
@@ -20,10 +28,11 @@ function Footer() {
 				Pour les passionné·e·s de plantes 🌿🌱🌵
 			</div>
 			<div className='th-footer-elem'>Laissez-nous votre mail :
-                <input type='email' value={inputValue}
-                onChange={(e) => handleInput(e)}
-                onBlur={handleBlur}/>
-                <button>Envoyer</button>
+                <input type='email' value={email}
+                onChange={(e) => handleChange(e)}
+                onBlur={handleBlur}
+                placeholder='softwaredev@gmail.com'/>
+                { enabled && <button onClick={handleSubmit} >Envoyer</button>}
             </div>
 		</footer>
 	)

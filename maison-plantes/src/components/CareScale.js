@@ -12,20 +12,14 @@ function CareScale({careType, scaleValue}){
             );
       
       return (
-            <div
-                  onClick={
-                        () => {
-                              alert(`Cette plante requiert ${level(scaleValue)}
-                              ${careType === 'light' ? 'de lumière' : "d'arrosage"}`)
-                        }
-                  }
-            >
+            <div>
                   {
                         careType === 'light' ? 'Luminosité ' : 'Humidité '
                   }
+                   :
                   {
                         range.map(elt => 
-                              scaleValue >= elt ? (<span key={elt.toString()}>{scaleType}</span>) : null
+                              scaleValue >= elt ? (<span key={elt.toString()} style={{marginLeft:10}}>{scaleType}</span>) : null
                         )
                   }
             </div>
